@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>if 選擇結構</title>
 </head>
 <body>
-<h1>PHP程式基礎</h1>
-<p>
-    <a href="ch1.php">第一章 變數</a>
-</p>
-<p>
-    <a href="ch2_if.php">第二章 if 選擇結構</a>
-</p>
+<?php 
 
+$score=99;
+
+if($score>=60){
+    echo "及格";
+}else{
+    echo "不及格";
+}
+
+?>
 </body>
 </html>
