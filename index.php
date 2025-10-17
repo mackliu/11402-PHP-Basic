@@ -13,6 +13,12 @@
 <p>
     <a href="ch2_if.php">第二章 if 選擇結構</a>
 </p>
+<p>
+    <a href="ch3_switch.php">第三章 switch 選擇結構</a>
+</p>
+<p>
+    <a href="pra01.php">第三章 選擇結構 練習</a>
+</p>
 
 </body>
 </html>
