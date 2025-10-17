@@ -19,6 +19,12 @@
 <p>
     <a href="pra01.php">第三章 選擇結構 練習</a>
 </p>
+<p>
+    <a href="ch4_for.php">第四章 For....loop </a>
+</p>
+<p>
+    <a href="pra02.php">第四章 迴圈練習 1</a>
+</p>
 
 </body>
 </html>
