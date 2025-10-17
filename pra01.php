@@ -16,7 +16,7 @@
 </ul>
 
 <?php
-$year=2000;
+$year=2400;
 
 
 if($year % 4 !=0){
@@ -34,7 +34,15 @@ if($year % 4 !=0){
         }
     }
 }
+echo "<hr>";
 
+$year=2400;
+if (($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0) {
+    echo "{$year}年是閏年";
+} else {
+    echo "{$year}年是平年";
+}
+echo "<hr>";
 
 ?>
 </body>
