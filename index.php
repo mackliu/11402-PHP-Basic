@@ -28,6 +28,9 @@
 <p>
     <a href="pra03.php">第四章 迴圈練習 - 九九乘法表</a>
 </p>
+<p>
+    <a href="pra04.php">第四章 迴圈練習 - 尋找字串</a>
+</p>
 
 </body>
 </html>
