@@ -25,6 +25,9 @@
 <p>
     <a href="pra02.php">第四章 迴圈練習 1</a>
 </p>
+<p>
+    <a href="pra03.php">第四章 迴圈練習 - 九九乘法表</a>
+</p>
 
 </body>
 </html>
