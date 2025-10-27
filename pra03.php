@@ -34,6 +34,37 @@ for($i=1;$i<=10;$i++){
         echo "<td>";
         echo $i-1;
         echo "</td>";
+      }else if($i<$j){
+          echo "<td>";
+          echo "</td>";
+      }else{
+          echo "<td>";
+          echo ($j-1)*($i-1);
+          echo "</td>";
+      }
+    }
+    echo "</tr>";
+}
+?>
+    </table>
+</div>
+<div style="border:1px solid black;padding:10px;width:fit-content">
+    <table>
+<?php
+for($i=1;$i<=10;$i++){
+    echo "<tr>";
+    for($j=1;$j<=10;$j++){
+      if($i==1 && $j==1){
+        echo "<td>";
+        echo "</td>";
+      }else if($i==1){
+        echo "<td>";
+        echo $j-1;
+        echo "</td>";
+      }else if($j==1){
+        echo "<td>";
+        echo $i-1;
+        echo "</td>";
       }else{
           echo "<td>";
           echo ($j-1)*($i-1);
