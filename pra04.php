@@ -47,7 +47,6 @@ while($pos==-1 && $count<=mb_strlen($str)-mb_strlen($search)+1 ){
     $target=mb_substr($str,$count,mb_strlen($search));
     if($search==$target){
         $pos=$count;
-        //break;
     }
     $count++; 
 }
