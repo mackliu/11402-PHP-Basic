@@ -34,6 +34,12 @@
 <p>
     <a href="pra05.php">第四章 迴圈練習 - 畫星星</a>
 </p>
+<p>
+    <a href="ch5_array.php">第五章 陣列</a>
+</p>
+<p>
+    <a href="pra06.php">第五章 陣列練習-設計陣列</a>
+</p>
 
 </body>
 </html>
