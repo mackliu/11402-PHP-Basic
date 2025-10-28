@@ -40,6 +40,9 @@
 <p>
     <a href="pra06.php">第五章 陣列練習-設計陣列</a>
 </p>
+<p>
+    <a href="pra06.php">第五章 陣列練習-閏年與天干地支</a>
+</p>
 
 </body>
 </html>
