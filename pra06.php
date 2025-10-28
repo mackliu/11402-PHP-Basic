@@ -116,6 +116,67 @@ echo "</tr>";
 
 
 ?>
-
-
 </table>
+
+
+<H2>利用程式來產生陣列</H2>
+
+<?php
+$ninetimes=[];
+
+for($i=1;$i<=9;$i++){
+
+    for($j=1;$j<=9;$j++){
+
+        $ninetimes[]= $j . ' x '.$i.' = '.($j*$i);
+
+    }
+
+}
+
+//echo "<pre>";
+//print_r($ninetimes);
+//echo "</pre>";
+echo "<table>";
+foreach($ninetimes as $idx => $nine){
+    if($idx %9 ==0 ){
+        echo "<tr>";
+    }
+    echo "<td>";
+    echo $nine;
+    echo "</td>";
+    
+    if($idx%9==8){
+        echo "</tr>";
+    }
+}
+echo "</table>";
+
+?>
+<?php
+$ninetimes=[];
+
+for($i=1;$i<=9;$i++){
+
+    for($j=1;$j<=9;$j++){
+
+        $ninetimes[$i][$j]=$j*$i;
+
+    }
+
+}
+echo "<pre>";
+print_r($ninetimes);
+echo "</pre>";
+
+
+echo "<br>";
+echo $ninetimes[7][4];
+echo $ninetimes[4][7];
+?>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
