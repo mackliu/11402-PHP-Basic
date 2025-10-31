@@ -84,30 +84,7 @@ echo "</div>";
     <li>地支：子丑寅卯辰巳午未申酉戌亥</li>
     <li>天干地支配對：甲子、乙丑、丙寅….甲戌、乙亥、丙子….</li>
 </ul>
-<?php 
-$sky=[ "甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
-$land=[ "子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
-$sl=[];
 
-for($i=0; $i<count($sky); $i++){
-    $pos=$i;
-    for($j=0; $j<count($land);$j++){
-        if($i%2==0 && $j %2==0){
-            $sl[$pos]=$sky[$i] . $land[$j];
-            $pos=$pos+10;
-        }else if($i%2==1 && $j %2 ==1){
-            $sl[$pos]=$sky[$i] . $land[$j];
-            $pos=$pos+10;
-        }
-    }
-
-}
-ksort($sl);
-
-echo "<pre>";
-print_r($sl);
-echo "</pre>";
-?>
 <h2>簡單解法</h2>
 <?php
 $tiangan = ["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"];
@@ -118,12 +95,22 @@ $ganzhi = []; // 存放 60 組結果的陣列
 for ($i = 0; $i < 60; $i++) {
     $tg = $tiangan[$i % 10];   // 天干循環
     $dz = $dizhi[$i % 12];     // 地支循環
-    $ganzhi[] = $tg . $dz;
+    $ganzhi[$i+1984] = $tg . $dz;
 }
 
 // 顯示結果
+echo "<pre>";
 print_r($ganzhi);
+echo "</pre>";
+echo $ganzhi[2035];
 ?>
+<h2>天干地支-公式解</h2>
+<?php
+$year=2133;
+$idx=$year-4;
+echo "西元".$year."年，是". $tiangan[$idx%10] . $dizhi[$idx%12] ."年";
+?>
+
 
   <p>&nbsp;</p>
   <p>&nbsp;</p>
