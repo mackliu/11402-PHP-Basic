@@ -61,3 +61,53 @@ echo "距離下一次生日 $t 還有".$days."天";
 
 
 ?>
+
+<h2>利用date()函式的格式化參數，完成以下的日期格式呈現</h2>
+
+<ul>
+    <li>2021/10/05</li>
+    <li>10月5日 Tuesday</li>
+    <li>2021-10-5 12:9:5</li>
+    <li>2021-10-5 12:09:05</li>
+    <li>今天是西元2021年10月5日 上班日(或假日)</li>
+</ul>
+<?php 
+echo date("Y/m/d");
+echo "<br>";
+echo date("m月d日 l");
+echo "<br>";
+echo date("Y-n-j G:i:s");
+echo "<br>";
+echo "今天是西元".date("Y年m月d日")." ".((date("N")>=6)?"假日":"上班日");
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
+
+?>
+
+
+
+
+<h2>利用迴圈來計算連續五個周一的日期</h2>
+例:
+
+<ul>
+    <li>2021-10-04 星期一</li>
+    <li>2021-10-11 星期一</li>
+    <li>2021-10-18 星期一</li>
+    <li>2021-10-25 星期一</li>
+    <li>2021-11-01 星期一</li>
+</ul>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
