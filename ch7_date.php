@@ -80,15 +80,9 @@ echo date("Y-n-j G:i:s");
 echo "<br>";
 echo "今天是西元".date("Y年m月d日")." ".((date("N")>=6)?"假日":"上班日");
 echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
 
 
 ?>
-
-
 
 
 <h2>利用迴圈來計算連續五個周一的日期</h2>
@@ -102,7 +96,31 @@ echo "<br>";
     <li>2021-11-01 星期一</li>
 </ul>
 
+<h2>月曆製作提示</h2>
+<?php 
+$today=strtotime("now");
+$month=date("m",$today);
+$firstDayMonth=date("Y-m-1");
+$firstWeek=date("N",strtotime($firstDayMonth));
+echo "<br>";
+echo "1號的星期:".$firstWeek;
+echo "<br>";
+echo "這個月:".$month;
+if($firstWeek<7){
+    $tableFirstDay=strtotime("-$firstWeek days",strtotime($firstDayMonth));
+}else{
+    $tableFirstDay=strtotime($firstDayMonth);
+}
+echo date("Y-m-d",$tableFirstDay);
 
+echo "<br>";
+
+for($i=0;$i<42;$i++){
+    echo date("Y-m-d" ,strtotime("+$i days",$tableFirstDay));
+    echo "<br>";
+}
+
+?>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
