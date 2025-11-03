@@ -46,6 +46,9 @@
 <p>
     <a href="ch6_strings.php">第六章 字串練習</a>
 </p>
+<p>
+    <a href="ch7_date.php">第七章 日期與時間</a>
+</p>
 
 </body>
 </html>
