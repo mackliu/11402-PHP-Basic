@@ -129,7 +129,36 @@ for($i=0;$i<mb_strlen($str);$i++){
 
 }
 
+echo "<hr>";
+$start=-1;
+$end=-1;
+for($i=0;$i<mb_strlen($str);$i++){
 
+    $color=$colors[$i%7];
+    $word=mb_substr($str,$i,1);
+
+    $chk=mb_substr($str,$i,mb_strlen($keyword));
+
+    if($chk==$keyword){
+        $start=$i;
+        $end=$i+(mb_strlen($keyword)-1);
+    }
+
+    if($start<=$i &&  $end>=$i){
+        echo "<span style='color:{$color};font-size:26px'>$word</span>";
+    }else{
+        echo "<span style='color:{$color}'>$word</span>";
+    }
+    
+/*     if(is_int(strpos($keyword,$word))){
+
+        echo "<span style='color:{$color};font-size:26px'>$word</span>";
+    }else{
+
+        echo "<span style='color:{$color}'>$word</span>";
+    } */
+
+}
 
 ?>
 
