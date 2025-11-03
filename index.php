@@ -43,6 +43,9 @@
 <p>
     <a href="pra07.php">第五章 陣列練習-閏年與天干地支</a>
 </p>
+<p>
+    <a href="ch6_strings.php">第六章 字串練習</a>
+</p>
 
 </body>
 </html>
