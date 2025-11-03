@@ -80,7 +80,22 @@ echo "...";
     <li>“學會PHP網頁程式設計，薪水會加倍，工作會好找”</li>
     <li>請將上句中的 “程式設計” 放大字型或變色.</li>
 </ul>
+<?php 
+$str="學會python程式設計，薪水會加好多倍，工作會好找";
+$keyword="程式設計";
+$change="<span style='font-size:26px;color:red'>{$keyword}</span>";
 
+
+$target=str_replace($keyword,$change,$str);
+echo $target;
+
+?>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
