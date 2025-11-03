@@ -90,6 +90,48 @@ $target=str_replace($keyword,$change,$str);
 echo $target;
 
 ?>
+<hr>
+<?php 
+$str="人工智能正在滲透到幾乎所有行業，而遊戲業務可能是下一個重大變革的對象。人工智能工具已經有助於提高幀速率並幫助開發工作，但現在的願景是從人工智能係統構建整個遊戲";
+$keyword="人工智能";
+$colors = [
+    '#FF5733', // 橘紅色
+    '#33FF57', // 草綠色
+    '#3357FF', // 深藍色
+    '#F1C40F', // 金黃色
+    '#9B59B6', // 紫色
+    '#1ABC9C', // 青綠色
+    '#E74C3C'  // 紅色
+];
+$change="<span style='font-size:26px;color:red'>{$keyword}</span>";
+
+echo "<hr>";
+for($i=0;$i<mb_strlen($str);$i++){
+
+    $color=$colors[$i%7];
+    $word=mb_substr($str,$i,1);
+
+    echo "<span style='color:{$color}'>$word</span>";
+}
+echo "<hr>";
+for($i=0;$i<mb_strlen($str);$i++){
+
+    $color=$colors[$i%7];
+    $word=mb_substr($str,$i,1);
+
+    if(is_int(strpos($keyword,$word))){
+
+        echo "<span style='color:{$color};font-size:26px'>$word</span>";
+    }else{
+
+        echo "<span style='color:{$color}'>$word</span>";
+    }
+
+}
+
+
+
+?>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
