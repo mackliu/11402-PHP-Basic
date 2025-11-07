@@ -95,31 +95,84 @@ echo "<br>";
     <li>2021-10-25 星期一</li>
     <li>2021-11-01 星期一</li>
 </ul>
-
+<style>
+table{
+    border-collapse:collapse;
+    max-width:70%;
+    min-width:500px;
+    margin:10px auto;
+}    
+table td,table th{
+    border:1px solid #999;
+    padding:5px 10px;
+    text-align:center;
+}
+table th{
+    background:skyblue;
+}
+</style>
 <h2>月曆製作提示</h2>
 <?php 
 $today=strtotime("now");
-$month=date("m",$today);
-$firstDayMonth=date("Y-m-1");
-$firstWeek=date("N",strtotime($firstDayMonth));
+echo "今天是:".date("Y-m-d");
 echo "<br>";
-echo "1號的星期:".$firstWeek;
+$targetDay=date("Y-m-d");
+$Ttime=strtotime($targetDay);
+$month=date("m",$Ttime);
+echo "月份:".$month;
 echo "<br>";
-echo "這個月:".$month;
-if($firstWeek<7){
-    $tableFirstDay=strtotime("-$firstWeek days",strtotime($firstDayMonth));
-}else{
-    $tableFirstDay=strtotime($firstDayMonth);
+$firstDayMonth=date("Y-m-1",$Ttime);
+echo "本月第一天:".$firstDayMonth;
+echo "<br>";
+$firstWeek=date("w",strtotime($firstDayMonth));
+echo "<br>";
+echo "這個月1號是星期:".$firstWeek;
+echo "<br>";
+$monthDays=date("t",$Ttime);
+echo "這個月有 ".$monthDays."天";
+echo "<br>";
+$monthWeeks=ceil(($monthDays + $firstWeek)/7);
+echo "這個月有 ".$monthWeeks." 周";
+echo "<br>";
+$tableFirstDay=strtotime("-$firstWeek days",strtotime($firstDayMonth));
+echo "這個月曆第一格的日期為:". date("Y-m-d",$tableFirstDay);
+echo "<br>";
+
+
+//開始畫月曆
+echo "<h2 style='text-align:center'>".$month."月";
+echo "<table>";
+echo "<tr>";
+echo "<th>日</th>";
+echo "<th>一</th>";
+echo "<th>二</th>";
+echo "<th>三</th>";
+echo "<th>四</th>";
+echo "<th>五</th>";
+echo "<th>六</th>";
+echo "</tr>";
+
+
+for($i=0;$i<$monthWeeks*7;$i++){
+
+    if($i%7==0){
+        echo "<tr>";
+        echo "<td>";
+        echo date("d" ,strtotime("+$i days",$tableFirstDay));
+        echo "</td>";
+    }else{
+        echo "<td>";
+        echo date("d" ,strtotime("+$i days",$tableFirstDay));
+        echo "</td>";
+    }
+
+    if($i%7==6){
+        echo "</tr>";
+    }
+    
 }
-echo date("Y-m-d",$tableFirstDay);
 
-echo "<br>";
-
-for($i=0;$i<42;$i++){
-    echo date("Y-m-d" ,strtotime("+$i days",$tableFirstDay));
-    echo "<br>";
-}
-
+echo "<table>";
 ?>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
