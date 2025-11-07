@@ -49,6 +49,9 @@
 <p>
     <a href="ch7_date.php">第七章 日期與時間</a>
 </p>
+<p>
+    <a href="pra08.php">第七章 月曆製作</a>
+</p>
 
 </body>
 </html>
